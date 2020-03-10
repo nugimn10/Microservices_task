@@ -11,22 +11,17 @@ using CustomerServices.Application.UseCases.Customer.Queries.GetCustomer;
 using CustomerServices.Application.UseCases.Payment.Command.CreatePayment;
 using CustomerServices.Application.UseCases.Payment.Queries.GetPayment;
 
-using CustomerServices.Domain.Models;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CustomerServices.Infrastructure.Presistences;
-using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Tokens;
 namespace CustomerServices
 {
     public class Startup
