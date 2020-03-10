@@ -10,13 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CustomerServices.Migrations
 {
     [DbContext(typeof(dbContext))]
-<<<<<<< HEAD:CustomerServices/Migrations/20200310163614_intialcustomer2.Designer.cs
-    [Migration("20200310163614_intialcustomer2")]
-    partial class intialcustomer2
-=======
-    [Migration("20200310112647_initialcustomernew")]
-    partial class initialcustomernew
->>>>>>> 046bf1de229e55fe39b0957264faa60b0c550157:CustomerServices/Migrations/20200310112647_initialcustomernew.Designer.cs
+    [Migration("20200310113148_initialcreatemerchant")]
+    partial class initialcreatemerchant
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
