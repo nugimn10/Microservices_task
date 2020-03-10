@@ -16,4 +16,4 @@ RUN dotnet publish  -c Release -o /app
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS build
 WORKDIR /app
 COPY --from=base-customer /app ./
-ENTRYPOINT [ "dotnet.csproj", "CustomerServices" ]
+ENTRYPOINT [ "dotnet", "CustomerServices.dll" ]

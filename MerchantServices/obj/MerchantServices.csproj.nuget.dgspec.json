@@ -42,22 +42,6 @@
               "target": "Package",
               "version": "[8.6.2, )"
             },
-            "Hangfire": {
-              "target": "Package",
-              "version": "[1.7.9, )"
-            },
-            "Hangfire.AspNetCore": {
-              "target": "Package",
-              "version": "[1.7.9, )"
-            },
-            "Hangfire.Core": {
-              "target": "Package",
-              "version": "[1.7.9, )"
-            },
-            "Hangfire.PostgreSQL": {
-              "target": "Package",
-              "version": "[1.6.4.1, )"
-            },
             "MediatR": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -65,10 +49,6 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
-            },
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[3.1.1, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -83,10 +63,6 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[3.1.2, )"
-            },
-            "mailkit": {
-              "target": "Package",
-              "version": "[2.5.1, )"
             }
           },
           "imports": [

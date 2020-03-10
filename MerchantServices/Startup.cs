@@ -38,7 +38,7 @@ namespace MerchantServices
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<dbContext>(option => option.UseNpgsql("Host=127.0.0.1;Username=postgres;Password=sayangkamu;Database=MerchantServicesDb"));
+            services.AddDbContext<dbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("defaultConnection")));
             services.AddMvc().AddFluentValidation();
 
              services

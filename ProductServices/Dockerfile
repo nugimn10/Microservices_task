@@ -16,4 +16,4 @@ RUN dotnet publish  -c Release -o /app
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS build
 WORKDIR /app
 COPY --from=base-product /app ./
-ENTRYPOINT [ "./app" ]
+ENTRYPOINT [ "dotnet", "ProductServices.dll" ]
