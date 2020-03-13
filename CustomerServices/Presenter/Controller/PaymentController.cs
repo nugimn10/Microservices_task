@@ -18,8 +18,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace CustomerServices.Presenter.Controllers
 {
     [ApiController]
-    [Route("payment")]
-    [Authorize]
+    [Route("card")]
     public class PaymentController : ControllerBase
     {
         private IMediator _mediatr;
@@ -30,9 +29,9 @@ namespace CustomerServices.Presenter.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<GetPaymentsQuery>> GetCustomer()
+        public async Task<ActionResult<GetPaymentsDto>> GetCustomer()
         {
-            var result = new GetPaymentsDto();
+            var result = new GetPaymentsQuery();
             return Ok(await _mediatr.Send(result));
         }
 

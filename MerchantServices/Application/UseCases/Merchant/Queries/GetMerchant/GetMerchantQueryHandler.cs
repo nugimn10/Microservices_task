@@ -23,7 +23,7 @@ namespace MerchantServices.Application.UseCases.Merchant.Queries.GetMerchant
             return new GetMerchantDto
             {
                 Success = true,
-                Message = "Creator successfully retrieved",
+                Message = "Merchant successfully retrieved",
                 Data = new MerchantD
                 {
                     name = result.name,

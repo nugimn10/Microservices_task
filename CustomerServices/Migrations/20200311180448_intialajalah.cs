@@ -4,11 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CustomerServices.Migrations
 {
-<<<<<<< HEAD:CustomerServices/Migrations/20200310163614_intialcustomer2.cs
-    public partial class intialcustomer2 : Migration
-=======
-    public partial class initialcustomernew : Migration
->>>>>>> 046bf1de229e55fe39b0957264faa60b0c550157:CustomerServices/Migrations/20200310112647_initialcustomernew.cs
+    public partial class intialajalah : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

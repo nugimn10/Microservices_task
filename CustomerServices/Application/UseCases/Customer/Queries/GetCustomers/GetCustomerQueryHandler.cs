@@ -24,7 +24,7 @@ namespace CustomerServices.Application.UseCases.Customer.Queries.GetCustomers
             return new GetCustomersDto
             {
                 Success = true,
-                Message = "Creator successfully retrieved",
+                Message = "customer successfully retrieved",
                 Data = data
             };
 

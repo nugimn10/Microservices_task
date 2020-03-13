@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CustomerServices.Migrations
+namespace MerchantServices.Migrations
 {
-    public partial class initialmerchantnew : Migration
+    public partial class initmerchaa : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

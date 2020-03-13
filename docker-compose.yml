@@ -1,0 +1,63 @@
+
+version: "3"
+services:
+  nugi-customerservices:
+    image: nugimn/customerservices:latest
+    ports:
+      - "3000:3002"
+    networks:
+      - network-bridge
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+  nugi-merchantservices:
+    image: nugimn/merchantservices:latest
+    ports:
+      - "4000:4002"
+    networks:
+      - network-bridge
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+  nugi-productservices:
+    image: nugimn/productservices:latest
+    ports:
+      - "5000:5002"
+    networks:
+      - network-bridge
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+
+  pgdocker:
+    image: postgres:latest
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD : docker
+    networks:
+      - network-bridge
+    ports:
+      - "5432:5432"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+networks:
+  network-bridge:
+
+
+volumes:
+  db-data:

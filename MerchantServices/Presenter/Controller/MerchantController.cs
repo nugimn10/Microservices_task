@@ -19,7 +19,6 @@ namespace MerchantServices.Presenter.Controllers
 {
     [ApiController]
     [Route("merchant")]
-    [Authorize]
     public class MerchantController : ControllerBase
     {
         private IMediator _mediatr;
@@ -30,21 +29,21 @@ namespace MerchantServices.Presenter.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<GetMerchantsQuery>> GetCustomer()
+        public async Task<ActionResult<GetMerchantsQuery>> GetMerchant()
         {
-            var result = new GetMerchantsDto();
+            var result = new GetMerchantsQuery();
             return Ok(await _mediatr.Send(result));
         }
 
         [HttpPost]
-        public async Task<ActionResult> PostCustomer( CreateMerchantCommand payload)
+        public async Task<ActionResult> Postmerchant( CreateMerchantCommand payload)
         {
             var result = await _mediatr.Send(payload);
             return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<GetMerchantDto>> GetCustomerById(int id)
+        public async Task<ActionResult<GetMerchantDto>> GetmerchantById(int id)
         {
             var result = new GetMerchantQuery(id);
             return Ok(await _mediatr.Send(result));

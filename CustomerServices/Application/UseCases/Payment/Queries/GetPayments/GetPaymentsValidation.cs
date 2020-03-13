@@ -6,7 +6,6 @@ namespace CustomerServices.Application.UseCases.Payment.Queries.GetPayments
     {
         public GetPaymentsValidation()
         {
-            RuleFor(x => x.id).GreaterThan(0).NotEmpty().WithMessage("Id harus terdaftar");
           
         }
     }

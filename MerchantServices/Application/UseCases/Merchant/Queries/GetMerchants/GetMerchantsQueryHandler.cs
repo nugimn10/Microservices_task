@@ -21,17 +21,11 @@ namespace MerchantServices.Application.UseCases.Merchant.Queries.GetMerchants
 
             var data = await _context.Merchant.ToListAsync();
 
-            var result = data.Select(e => new MerchantD
-            {
-                name = e.name,
-                address = e.address,
-            });
-
             return new GetMerchantsDto
             {
                 Success = true,
                 Message = "Creator successfully retrieved",
-                Data = result.ToList()
+                Data = data
             };
 
         }
